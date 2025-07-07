@@ -1,5 +1,3 @@
-#pip install extra-streamlit-components
-
 import os
 import pyodbc
 import streamlit as st
@@ -51,11 +49,7 @@ def load_css1():
 
 # Configuração da conexão com o SQL Server (mantida igual)
 def get_db_connection():
-    server = '192.168.0.10'
-    database = 'DB_DEV'
-    username = 'CTRL'
-    password = 'Cury@CA2kV4*!'
-    
+   
     try:
         conn = pyodbc.connect(
             f'DRIVER={{ODBC Driver 17 for SQL Server}};'
@@ -257,5 +251,3 @@ if __name__ == "__main__":
     # Inicializa o cookie manager antes de tudo
     cookie_manager = CookieManager(key='auth_manager')
     main()
-
-    #streamlit run app.py
